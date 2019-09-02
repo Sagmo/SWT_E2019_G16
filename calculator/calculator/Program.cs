@@ -10,9 +10,11 @@ namespace calculator
 
             Console.WriteLine("*** Welcome to calculator! ***");
 
-            fnc.Add(5, 5);
+            fnc.Add(3, 4);
 
             Console.ReadKey();
+
+            
         }
     }
 }
