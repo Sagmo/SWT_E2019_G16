@@ -12,6 +12,9 @@ namespace calculator
 
             fnc.Add(3, 4);
 
+            Console.ReadKey();
+
+
         }
     }
 }
