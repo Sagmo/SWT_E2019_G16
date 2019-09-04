@@ -1,4 +1,0 @@
-\contentsline {section}{\numberline {1}Indledning}{2}{section.1}% 
-\contentsline {section}{\numberline {2}Opgave 1 : Some shit}{2}{section.2}% 
-\contentsline {section}{\numberline {3}Opgave 2 : jeg vet ikke rigtig hvad vi skal lave her}{2}{section.3}% 
-\contentsline {section}{\numberline {4}Konklusion}{2}{section.4}% 
