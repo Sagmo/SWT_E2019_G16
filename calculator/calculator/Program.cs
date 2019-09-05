@@ -10,10 +10,6 @@ namespace calculator
 
             Console.WriteLine("*** Welcome to calculator! ***");
 
-            fnc.Add(5, 5);
-            fnc.Subtract(1, 4);
-            //tehth
-
             Console.ReadKey();
         }
     }
