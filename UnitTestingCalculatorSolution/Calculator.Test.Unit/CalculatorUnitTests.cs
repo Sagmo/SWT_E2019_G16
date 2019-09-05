@@ -17,6 +17,12 @@ namespace Calculator.Test.Unit
             _uut = new Calculator();
         }
 
+        [TestCase(0)]
+        public void Accumulator_AccumulatorInitialTest_ResultIsCorrect(int result)
+        {
+            Assert.That(_uut.Accumulator, Is.EqualTo(result));
+        }
+
         [TestCase(3, 3, 6)]
         [TestCase(-3, -2, -5)]
         [TestCase(-3, 2, -1)]
