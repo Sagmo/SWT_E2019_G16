@@ -73,6 +73,5 @@ namespace Calculator.Test.Unit
         {
             Assert.That(_uut.Divide(a, b), Is.EqualTo(result));
         }
-
     }
 }
