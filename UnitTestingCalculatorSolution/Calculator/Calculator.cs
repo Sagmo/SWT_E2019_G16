@@ -4,7 +4,6 @@ namespace Calculator
 {
     public class Calculator
     {
-        private double lastResult = 0;
         public double Add(double a, double b)
         {
             Accumulator = a + b;
