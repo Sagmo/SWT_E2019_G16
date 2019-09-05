@@ -31,9 +31,8 @@ namespace Calculator
 
         public double Divide(double a, double b)
         {
-            lastResult = a / b;
-            Accumulator.set(lastResult);
-            return Accumulator.get;
+            Accumulator = a / b;
+            return Accumulator;
         }
 
         public double Accumulator {get; private set; }
