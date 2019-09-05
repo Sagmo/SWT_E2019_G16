@@ -30,8 +30,21 @@ namespace Calculator
 
         public double Divide(double a, double b)
         {
-            Accumulator = a / b;
+            try
+            {
+                Accumulator = a / b;
+            }
+            catch (System.DivideByZeroException)
+            {
+                //Console.WriteLine("ERROR: Trying to divide {0}, by zero", a);
+                Accumulator = 0;
+            }
             return Accumulator;
+        }
+
+        public void Clear()
+        {
+            Accumulator = 0;
         }
 
         public double Accumulator {get; private set; } = 0;

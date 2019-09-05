@@ -74,8 +74,22 @@ namespace Calculator.Test.Unit
         [TestCase(10, 2, 5)]
         [TestCase(1, 1, 1)]
         [TestCase(-2, 2, -1)]
-        [TestCase(-2, -2, 1)]
+        [TestCase(-4, -2, 2)]
         public void Divide_DivideNumbers_ResultIsCorrect(double a, double b, double result)
+        {
+            Assert.That(_uut.Divide(a, b), Is.EqualTo(result));
+        }
+
+        [TestCase(0)]
+        public void Clear_ClearAccumulator_ResultIsCorrect(double result)
+        {
+            _uut.Clear();
+            Assert.That(_uut.Accumulator, Is.EqualTo(result));
+        }
+
+        // Testing try-catch in dived -> dived-by-zero
+        [TestCase(1,(double)0,0)]
+        public void Divide_DivideByZero_ResultIsCorrect(double a, double b, double result)
         {
             Assert.That(_uut.Divide(a, b), Is.EqualTo(result));
         }
