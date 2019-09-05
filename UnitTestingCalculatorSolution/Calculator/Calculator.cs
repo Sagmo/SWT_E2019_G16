@@ -30,10 +30,6 @@ namespace Calculator
 
         public double Divide(double a, double b)
         {
-            Accumulator = a / b;
-            return Accumulator;
-
-            /*
             try
             {
                 Accumulator = a / b;
@@ -44,7 +40,6 @@ namespace Calculator
                 Accumulator = 0;
             }
             return Accumulator;
-            */
         }
 
         public void Clear()
