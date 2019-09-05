@@ -25,7 +25,7 @@ namespace Calculator
 
         public double Power(double a, double b)
         {
-            lastResult = Math.Pow(a + b);
+            lastResult = Math.Pow(a,b);
             return Math.Pow(a, b);
         }
 
@@ -36,7 +36,7 @@ namespace Calculator
             return Accumulator.get;
         }
 
-        public double Accumulator { get; private set; }
+        public double Accumulator {get; private set; }
 
 
     }
