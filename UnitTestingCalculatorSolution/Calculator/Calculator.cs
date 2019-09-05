@@ -33,7 +33,7 @@ namespace Calculator
         {
             lastResult = a / b;
             Accumulator.set(lastResult);
-            return Accumulator.get();
+            return Accumulator.get;
         }
 
         public double Accumulator { get; private set; }
