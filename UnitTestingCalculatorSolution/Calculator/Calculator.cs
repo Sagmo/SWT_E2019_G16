@@ -23,5 +23,12 @@ namespace Calculator
         {
             return Math.Pow(a, b);
         }
+
+        public double Divide(double a, double b)
+        {
+            return a / b;
+        }
+
+
     }
 }
