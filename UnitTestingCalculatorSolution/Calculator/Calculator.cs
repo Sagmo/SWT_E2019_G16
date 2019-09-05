@@ -29,6 +29,7 @@ namespace Calculator
             return a / b;
         }
 
+        public double Accumulator { get; private set; }
 
     }
 }
