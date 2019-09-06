@@ -136,10 +136,19 @@ namespace Calculator.Test.Unit
         }
 
 
-        [TestCase(0, 11, 1)]
-        [TestCase(1, 3, 3)]
-        [TestCase(3, 2, 8)]
-        public void Overloaded_Power_ResultIsCorrect(double a, double prevResult, double result)
+       // [TestCase(0, 11, 1)]
+        //[TestCase(1, 3, 3)]
+        //[TestCase(3, 2, 8)]
+        [TestCase(2, 3, 8)]
+        [TestCase(2, -3, 0.125)]
+        [TestCase(-2, -3, -0.125)]
+        [TestCase(1, 10, 1)]
+        [TestCase(1, -10, 1)]
+        [TestCase(10, 0, 1)]
+        [TestCase(4, 0.5, 2.0)]
+        [TestCase(-9, 0.5, -3.0)]
+        [TestCase(0.5, -9, 512)]
+        public void Overloaded_Power_ResultIsCorrect(double prevResult, double a, double result)
         {
             _uut.Add(prevResult);
             Assert.That(_uut.Power(a), Is.EqualTo(result));
