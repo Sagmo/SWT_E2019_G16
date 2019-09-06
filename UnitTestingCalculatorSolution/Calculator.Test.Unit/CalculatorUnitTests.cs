@@ -80,6 +80,15 @@ namespace Calculator.Test.Unit
             Assert.That(_uut.Divide(a, b), Is.EqualTo(result));
         }
 
+
+        // Testing try-catch in dived -> dived-by-zero
+        [TestCase(1,0,0)]
+        public void Divide_DivideByZero_ResultIsCorrect(double a, double b, double result)
+        {
+            Assert.That(_uut.Divide(a, b), Is.EqualTo(result));
+        }
+
+
         [TestCase(0)]
         public void Clear_ClearAccumulator_ResultIsCorrect(double result)
         {
@@ -87,11 +96,13 @@ namespace Calculator.Test.Unit
             Assert.That(_uut.Accumulator, Is.EqualTo(result));
         }
 
-        // Testing try-catch in dived -> dived-by-zero
-        [TestCase(1,0,0)]
-        public void Divide_DivideByZero_ResultIsCorrect(double a, double b, double result)
+
+        [TestCase(1, 1)]
+        [TestCase(3, 4)]
+        [TestCase(4, 8)]
+        public void Overloaded_Add_ResultIsCorrect(double a, double result)
         {
-            Assert.That(_uut.Divide(a, b), Is.EqualTo(result));
+            Assert.That(_uut.Add(a), Is.EqualTo(result));
         }
     }
 }
