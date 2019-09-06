@@ -1,6 +1,7 @@
 ﻿using System;
 using Calculator;
 using NUnit.Framework;
+using  CalculatorException;
 
 
 namespace Calculator.Test.Unit
@@ -85,7 +86,7 @@ namespace Calculator.Test.Unit
         [TestCase(1,0,0)]
         public void Divide_DivideByZero_ResultIsCorrect(double a, double b, double result)
         {
-            Assert.That(_uut.Divide(a, b), Is.EqualTo(result));
+            Assert.That(() => _uut.Divide(a, b), Throws.TypeOf<CalculatorException.NewDivideByZeroException>());
         }
 
 

@@ -1,9 +1,13 @@
 ﻿using System;
+using CalculatorException;
+
 
 namespace Calculator
 {
     public class Calculator
     {
+        NewDivideByZeroException dt = new NewDivideByZeroException();
+
         public double Add(double a, double b)
         {
             Accumulator = a + b;
@@ -32,17 +36,10 @@ namespace Calculator
         {
             if(b == 0)
             {
-                throw new System.DivideByZeroException();
+                throw new NewDivideByZeroException();
             }
-            try
-            {
-                Accumulator = a / b;
-            }
-            catch (DivideByZeroException)
-            {
-                //Console.WriteLine("ERROR: Trying to divide {0}, by zero", a);
-                return Accumulator = 0;
-            }
+
+            Accumulator = a / b;
             return Accumulator;
         }
 
@@ -82,6 +79,7 @@ namespace Calculator
             Accumulator = Math.Pow(Accumulator, exponent);
             return Accumulator;
         }
+
 
     }
 }
