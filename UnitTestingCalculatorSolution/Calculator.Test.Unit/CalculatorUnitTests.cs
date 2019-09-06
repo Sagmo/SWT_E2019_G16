@@ -89,21 +89,22 @@ namespace Calculator.Test.Unit
             Assert.That(() => _uut.Divide(a, b), Throws.TypeOf<CalculatorException.NewDivideByZeroException>());
         }
 
-
+        /*
         [TestCase(0)]
         public void Clear_ClearAccumulator_ResultIsCorrect(double result)
         {
             _uut.Clear();
             Assert.That(_uut.Accumulator, Is.EqualTo(result));
-        }
-
+        }*/
 
         [TestCase(1, 0, 1)]
         [TestCase(3, 1, 4)]
         [TestCase(4, 4, 8)]
         public void Overloaded_Add_ResultIsCorrect(double a, double prevResult, double result)
         {
+            _uut.Add(prevResult);
             Assert.That(_uut.Add(a), Is.EqualTo(a + prevResult));
         }
+
     }
 }
