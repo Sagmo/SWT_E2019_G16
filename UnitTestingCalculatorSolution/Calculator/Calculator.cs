@@ -11,7 +11,7 @@ namespace Calculator
         public double Add(double a, double b)
         {
             Accumulator = a + b;
-            return a + b;
+            return Accumulator;
         }
 
         public double Subtract(double a, double b)
