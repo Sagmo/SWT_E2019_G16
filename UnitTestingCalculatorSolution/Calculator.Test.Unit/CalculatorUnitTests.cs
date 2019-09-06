@@ -98,12 +98,12 @@ namespace Calculator.Test.Unit
         }
 
 
-        [TestCase(1, 1)]
-        [TestCase(3, 4)]
-        [TestCase(4, 8)]
-        public void Overloaded_Add_ResultIsCorrect(double a, double result)
+        [TestCase(1, 0, 1)]
+        [TestCase(3, 1, 4)]
+        [TestCase(4, 4, 8)]
+        public void Overloaded_Add_ResultIsCorrect(double a, double prevResult, double result)
         {
-            Assert.That(_uut.Add(a), Is.EqualTo(result));
+            Assert.That(_uut.Add(a), Is.EqualTo(a + prevResult));
         }
     }
 }
