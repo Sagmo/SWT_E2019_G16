@@ -49,5 +49,30 @@ namespace Calculator
 
         public double Accumulator {get; private set; } = 0;
 
+        public double Add(double addend)
+        {
+
+        }
+
+        public double Subtract(double subtractor)
+        {
+
+        }
+
+        public double Multiply(double multiplier)
+        {
+
+        }
+
+        public double Divide(double divisor)
+        {
+
+        }
+
+        public double Power(double exponent)
+        {
+
+        }
+
     }
 }
