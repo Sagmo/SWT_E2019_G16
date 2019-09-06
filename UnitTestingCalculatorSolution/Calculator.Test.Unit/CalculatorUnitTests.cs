@@ -88,7 +88,7 @@ namespace Calculator.Test.Unit
         }
 
         // Testing try-catch in dived -> dived-by-zero
-        [TestCase(1,(double)0,0)]
+        [TestCase(1,0,0)]
         public void Divide_DivideByZero_ResultIsCorrect(double a, double b, double result)
         {
             Assert.That(_uut.Divide(a, b), Is.EqualTo(result));
