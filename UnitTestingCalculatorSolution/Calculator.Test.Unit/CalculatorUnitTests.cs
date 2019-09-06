@@ -65,7 +65,6 @@ namespace Calculator.Test.Unit
         [TestCase(10, 0, 1)]
         [TestCase(4, 0.5, 2.0)]
 		[TestCase(9, 0.5, 3.0)]
-        [TestCase(-9, 0.5, -3.0)]
         [TestCase(0.5, -9, 512)]
         public void Power_RaiseNumbers_ResultIsCorrect(double x, double exp, double result)
         {
