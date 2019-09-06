@@ -80,6 +80,5 @@ namespace Calculator
             return Accumulator;
         }
 
-
     }
 }
