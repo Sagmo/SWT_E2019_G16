@@ -12,6 +12,14 @@ namespace CalculatorException
         {
 
         }
-    }
+   }
+
+   public class PowerImaginaryException : Exception
+   {
+   		public PowerImaginaryException()
+   		{
+   			
+   		}
+   }
 
 }

@@ -7,6 +7,7 @@ namespace Calculator
     public class Calculator
     {
         NewDivideByZeroException dt = new NewDivideByZeroException();
+        PowerImaginaryException ie = new PowerImaginaryException();
 
         public double Add(double a, double b)
         {
@@ -76,6 +77,12 @@ namespace Calculator
 
         public double Power(double exponent)
         {
+            bool ifInt = unchecked(exponent == (int) exponent);
+            if(Accumulator < 0 && !ifInt)
+            {
+                throw new PowerImaginaryException();
+            }
+            
             Accumulator = Math.Pow(Accumulator, exponent);
             return Accumulator;
         }

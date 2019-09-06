@@ -146,12 +146,19 @@ namespace Calculator.Test.Unit
         [TestCase(1, -10, 1)]
         [TestCase(10, 0, 1)]
         [TestCase(4, 0.5, 2.0)]
-        [TestCase(-9, 0.5, -3.0)]
         [TestCase(0.5, -9, 512)]
         public void Overloaded_Power_ResultIsCorrect(double prevResult, double a, double result)
         {
             _uut.Add(prevResult);
             Assert.That(_uut.Power(a), Is.EqualTo(result));
+        }        
+
+        // Testing try-catch in dived -> dived-by-zero
+        [TestCase(1.5,-9,0)]
+        public void Power_Imaginary_ResultIsCorrect(double a, double b, double result)
+        {
+            _uut.Add(b);
+            Assert.That(() => _uut.Power(a), Throws.TypeOf<CalculatorException.PowerImaginaryException>());
         }
     }
 }
