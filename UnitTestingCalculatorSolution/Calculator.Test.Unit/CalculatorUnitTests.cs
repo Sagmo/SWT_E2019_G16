@@ -89,13 +89,12 @@ namespace Calculator.Test.Unit
             Assert.That(() => _uut.Divide(a, b), Throws.TypeOf<CalculatorException.NewDivideByZeroException>());
         }
 
-        /*
         [TestCase(0)]
         public void Clear_ClearAccumulator_ResultIsCorrect(double result)
         {
             _uut.Clear();
             Assert.That(_uut.Accumulator, Is.EqualTo(result));
-        }*/
+        }
 
         [TestCase(1, 0, 1)]
         [TestCase(3, 1, 4)]
@@ -103,8 +102,47 @@ namespace Calculator.Test.Unit
         public void Overloaded_Add_ResultIsCorrect(double a, double prevResult, double result)
         {
             _uut.Add(prevResult);
-            Assert.That(_uut.Add(a), Is.EqualTo(a + prevResult));
+            Assert.That(_uut.Add(a), Is.EqualTo(result));
         }
 
+
+        [TestCase(-3, 1, 4)]
+        [TestCase(4, 3, -1)]
+        [TestCase(-1, -4, -3)]
+        public void Overloaded_Subtract_ResultIsCorrect(double a, double prevResult, double result)
+        {
+            _uut.Add(prevResult);
+            Assert.That(_uut.Subtract(a), Is.EqualTo(result));
+        }
+
+        
+        [TestCase(2, 1, 0.5)]
+        [TestCase(2, 28, 14)]
+        [TestCase(14, 14, 1)]
+        public void Overloaded_Divide_ResultIsCorrect(double a, double prevResult, double result)
+        {
+            _uut.Add(prevResult);
+            Assert.That(_uut.Divide(a), Is.EqualTo(result));
+        }
+
+
+        [TestCase(1, 10, 10)]
+        [TestCase(-3, 10, -30)]
+        [TestCase(-0.5, -30, 15)]
+        public void Overloaded_Multiply_ResultIsCorrect(double a, double prevResult, double result)
+        {
+            _uut.Add(prevResult);
+            Assert.That(_uut.Multiply(a), Is.EqualTo(result));
+        }
+
+
+        [TestCase(0, 11, 1)]
+        [TestCase(1, 3, 3)]
+        [TestCase(3, 2, 8)]
+        public void Overloaded_Power_ResultIsCorrect(double a, double prevResult, double result)
+        {
+            _uut.Add(prevResult);
+            Assert.That(_uut.Power(a), Is.EqualTo(result));
+        }
     }
 }
