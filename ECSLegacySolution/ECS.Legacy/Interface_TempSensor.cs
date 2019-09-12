@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ECS.Legacy
 {
-    interface Interface_TempSensor
+    public interface Interface_TempSensor
     {
+    	int GetTemp();
+    	bool RunSelfTest();
     }
 }

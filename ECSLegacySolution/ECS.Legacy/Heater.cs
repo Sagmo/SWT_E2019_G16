@@ -1,6 +1,6 @@
 ﻿namespace ECS.Legacy
 {
-    public class Heater : Interface_Heater
+    internal class Heater : Interface_Heater
     {
         public void TurnOn()
         {
